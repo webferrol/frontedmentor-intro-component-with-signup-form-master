@@ -1,4 +1,65 @@
+:root {
+  --color-primay-1: hsl(0, 100%, 74%); /* red */ 
+  --color-primary-2: hsl(154, 59%, 51%); /*green*/
+  --color-neutral-1: hsl(249, 10%, 26%); /*Dark Blue*/
+  --color-neutral-2: hsl(246, 25%, 77%); /*Grayish Blue*/
+  --color-accent: hsl(248, 32%, 49%); /*Blue*/
+  --mobil-width: 375px;
+  --desktop-with: 1440px;
+  --font-size: 16px;
+  --padding: 1rem;
+}
 /* Reset labels */
+
+html {
+  font-size: var(--font-size);
+}
+
+h1 {
+  text-wrap: balance;
+}
+
+/* Layout */
+
+.body-container {
+  display: grid;
+  min-height: 100vh;
+  align-content: center;
+  max-width: var(--desktop-with);
+  margin: auto;
+  background-color: var(--color-primay-1);
+  background-image: url(/images/bg-intro-mobile.png);
+  /* background-repeat: repeat; */
+  background-size: contain;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--mobil-width), 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  border-style: solid;
+}
+
+
+/* format styles */
+
+.main-header {
+  text-align: center;
+  color: var(--color-neutral-2);
+}
+
+.message, .form-controls {
+  padding: var(--padding);
+}
+
+.message {
+  background-color: var(--color-accent);
+}
+
+.form-controls {
+  background-color: white;
+}
 
 .link {
   text-decoration: none;
@@ -7,4 +68,9 @@
 .fields {
   padding-left: 0;
   list-style-type: none;
+}
+
+
+.btn {
+  text-wrap: nowrap;
 }
